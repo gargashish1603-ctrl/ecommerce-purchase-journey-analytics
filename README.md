@@ -1,5 +1,11 @@
 # ShopSphere E-commerce Purchase Journey Analytics & Conversion Optimization
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel%20App-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://presentation-coral-rho.vercel.app)
+[![Next.js 15](https://img.shields.io/badge/Next.js-15%20(App%20Router)-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org/)
+[![DuckDB](https://img.shields.io/badge/DuckDB-SQL%20Engine-FFF000?style=for-the-badge&logo=duckdb&logoColor=black)](https://duckdb.org/)
+
 ### A Data-Driven Investigation of the E-commerce Purchase Journey
 > *"Why do customers who demonstrate purchase intent abandon their journeys, where does friction concentrate, and which evidence-backed product interventions should ShopSphere prioritize to optimize conversion?"*
 
