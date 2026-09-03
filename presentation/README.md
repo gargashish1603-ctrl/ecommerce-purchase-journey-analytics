@@ -66,7 +66,9 @@ python scripts/generate_presentation_data.py
 ---
 
 ## 4. Vercel Deployment Instructions
-This application is pre-configured for zero-config deployment to Vercel:
+- **Live Production URL:** [https://presentation-coral-rho.vercel.app](https://presentation-coral-rho.vercel.app)
+
+This application is deployed and hosted on Vercel:
 1. Connect the GitHub repository to Vercel.
 2. Set **Root Directory** to `presentation`.
 3. Framework Preset will automatically detect **Next.js**.
