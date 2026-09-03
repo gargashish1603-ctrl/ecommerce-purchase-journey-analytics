@@ -27,3 +27,10 @@ data/processed/*.parquet
 .DS_Store
 Thumbs.db
 *.log
+
+# Node & Next.js
+node_modules/
+.next/
+out/
+build/
+*.tsbuildinfo
