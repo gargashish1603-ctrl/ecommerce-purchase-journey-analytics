@@ -74,8 +74,8 @@ A/B Experiment (KPI) ◄── Acceptance Criteria ◄── User Story ◄─�
 - **Functional Requirement (`FR-01`):** Trigger address prediction API after 3 characters; auto-populate City/State/Postal code upon selection.
 - **User Story (`US-01`):** *As a mobile shopper, I want my shipping address suggested automatically so that I can complete checkout quickly on a touchscreen without typing errors.*
 - **Acceptance Criteria (`AC-01`):** *Given a mobile user typing in the address line, When $\ge 3$ characters are typed, Then display $\le 5$ validated postal suggestions within $300\text{ms}$.*
-- **Candidate Experiment (`EXP-01`):** Mobile Address Autocomplete & Express Checkout.
-- **Primary Success KPI:** Mobile Address Stage Pass Rate (Baseline: $79.18\%$, Planning MDE: $+3.5\text{ pp}$ to $82.68\%$).
+- **Candidate Experiment (`EXP-01`):** Mobile Address Autocomplete & Input Streamlining.
+- **Primary Success KPI:** Mobile Address Stage Pass Rate (Baseline: $79.18\%$, Planning MDE: $+4.0\%$ relative lift $\to 82.35\%$).
 
 ---
 
@@ -85,12 +85,12 @@ Four candidate randomized controlled trials (A/B tests) were designed with rigor
 
 | Exp ID | Experiment Name | Primary Metric (Baseline) | Target MDE | Required Sample / Arm | Daily Traffic | Est. Runtime | Decision Rule |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **`EXP-01`** | Mobile Address Autocomplete & Express Pay | Mobile Address Pass Rate ($79.18\%$) | $+3.5\text{ pp}$ ($82.68\%$) | $2,279$ mobile starters | $147\text{/day}$ | **$31.0\text{ days}$** ($\sim 4.4\text{ wks}$) | SHIP if $p < 0.05$ & Pass Rate $\ge +2.0\text{ pp}$ without address error increase |
-| **`EXP-02`** | Dynamic Free Shipping Progress Bar & Add-ons | Sub-$\$75$ Cart-to-Purchase CVR ($34.36\%$) | $+3.0\text{ pp}$ ($37.36\%$) | $4,124$ sub-$\$75$ carts | $144\text{/day}$ | **$57.3\text{ days}$** ($\sim 8.2\text{ wks}$) | SHIP if $p < 0.05$ & CVR $\ge +2.0\text{ pp}$ without AOV dilution |
-| **`EXP-03`** | Smart Payment Recovery Modal & Fallback Wallets | Payment Failure Recovery Rate ($52.28\%$) | $+10.0\text{ pp}$ ($62.28\%$) | $385$ failed sessions | $9.5\text{/day}$ | **$81.1\text{ days}$** ($\sim 11.6\text{ wks}$)* | SHIP if $p < 0.05$ & Recovery $\ge +7.5\text{ pp}$ without gateway cost blowout |
-| **`EXP-04`** | Collapsible Promo Drawer & Deals Carousel | Cart-to-Checkout Initiation Rate ($61.60\%$) | $+2.0\text{ pp}$ ($63.60\%$) | $9,401$ cart sessions | $360\text{/day}$ | **$52.2\text{ days}$** ($\sim 7.5\text{ wks}$) | SHIP if $p < 0.05$ & Checkout Rate $\ge +1.5\text{ pp}$ with discount spend neutral |
+| **`EXP-01`** | Mobile Address Autocomplete & Input Streamlining | Mobile Address Pass Rate ($79.18\%$) | $+4.0\%$ relative ($82.35\%$) | $2,430$ mobile starters | $147.1\text{/day}$ | **$33.0\text{ days}$** ($\sim 5\text{ wks}$) | SHIP if $p < 0.05$ & relative lift $\ge +2.5\%$ without address error increase |
+| **`EXP-02`** | Free Shipping Threshold Progress Bar & Add-ons | Sub-$\$75$ Cart-to-Purchase CVR ($34.36\%$) | $+7.5\%$ relative ($36.93\%$) | $5,423$ sub-$\$75$ carts | $144.1\text{/day}$ | **$75.3\text{ days}$** ($\sim 11\text{ wks}$) | SHIP if $p < 0.05$ & relative lift $\ge +5.0\%$ with net margin neutral |
+| **`EXP-03`** | Smart Payment Decline Recovery & Fallback Wallets | Payment Failure Recovery Rate ($52.28\%$) | $+15.0\%$ relative ($60.12\%$) | $628$ failed sessions | $9.52\text{/day}$ | **$131.9\text{ days}$** ($\sim 18.8\text{ wks}$)* | SHIP if $p < 0.05$ & relative lift $\ge +10.0\%$ with zero duplicate charges |
+| **`EXP-04`** | Collapsible Promo Drawer & Deals Carousel | Cart-to-Checkout Initiation Rate ($61.60\%$) | $+3.0\%$ relative ($63.45\%$) | $10,768$ cart sessions | $359.5\text{/day}$ | **$59.9\text{ days}$** ($\sim 9\text{ wks}$) | SHIP if $p < 0.05$ & relative lift $\ge +2.0\%$ with discount budget neutral |
 
-*\*Note on EXP-03 Power: Standard power analysis for $+6.7\text{ pp}$ MDE indicates $18.8\text{ weeks}$ ($131.9\text{ days}$). With accelerated $+10.0\text{ pp}$ MDE intervention, runtime optimizes to $11.6\text{ weeks}$.*
+*\*Note on EXP-03 Power & Randomization: Based on ~9.52 daily payment decline sessions, running EXP-03 to detect a +15.0% relative MDE requires 18.8 weeks (131.9 days). Randomization hashes on customer_id for authenticated users and persistent visitor_id for guests. An accelerated alternative with +20.0% relative MDE requires 356/arm (712 total, ~75 days / 10.7 weeks).*
 
 ### 4-Quadrant Experiment Launch Governance:
 ```
